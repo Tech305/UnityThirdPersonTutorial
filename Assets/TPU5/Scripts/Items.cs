@@ -43,9 +43,16 @@ public class Items
     {
         get
         {
-            if (on.activeSelf) return true;
-            else if (off.activeSelf) return false;
-            else return false;
+            try
+            {
+                if (on.activeSelf) return true;
+                else if (off.activeSelf) return false;
+                else return false;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 
