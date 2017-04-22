@@ -10,8 +10,9 @@ public class StatSystem : MonoBehaviour {
 
     public float Health { get { return _curhealth / _maxhealth; } }
 
+    [SerializeField]
     private string _prefix, _name, _suffix;
-
+    [SerializeField]
     private float _curhealth = 100, _maxhealth = 100;
 
     // Use this for initialization
@@ -34,8 +35,7 @@ public class StatSystem : MonoBehaviour {
         }
     }
 
-    internal void setHealth(int v)
-    {
-        _curhealth = _curhealth - v;
-    }
+    internal void setHealth(int v) { _curhealth = v; }
+    internal void reduceHealth(int v) { _curhealth = _curhealth - v; }
+    internal void addHealth(int v) { if (_curhealth < _maxhealth && _curhealth + v < _maxhealth) _curhealth = _curhealth + v; }
 }

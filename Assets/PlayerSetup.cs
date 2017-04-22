@@ -16,7 +16,7 @@ public class PlayerSetup : MonoBehaviour
         cam.GetComponentInChildren<ThirdPersonCamera>().Activate(player);
         player.GetComponent<CharacterControllerLogic>().Activate(cam.GetComponentInChildren<ThirdPersonCamera>());
         player.AddComponent<StatSystem>();
-        player.GetComponent<StatSystem>().setName(StatSystem.NameSetType.Normal, "Guest");
+        player.GetComponent<StatSystem>().setName(StatSystem.NameSetType.Normal, "Player");
         GameObject NT = new GameObject("nametag");
         NT.transform.parent = player.transform;
         NT.AddComponent<NameTag>();
@@ -24,7 +24,7 @@ public class PlayerSetup : MonoBehaviour
         player.gameObject.AddComponent<WeaponManager>();
         cam.name = "Camera Rig";
         player.name = "Player";
-        player.GetComponent<StatSystem>().setHealth(25);
+        player.GetComponent<StatSystem>().setHealth(100);
         Destroy(this.gameObject);
 	}
 }

@@ -46,7 +46,7 @@ public class NameTag : MonoBehaviour
         forground.GetComponent<Transform>().localPosition = Vector3.zero;
 
     }
-    void setupNameTag(TextMesh tm)
+    private void setupNameTag(TextMesh tm)
     {
         tm.transform.parent = transform;
         tm.transform.localPosition = Vector3.zero + new Vector3(0, 0.2f, 0);

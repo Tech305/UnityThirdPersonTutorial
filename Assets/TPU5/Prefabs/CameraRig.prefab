@@ -200,7 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Active: 0
   cameraXform: {fileID: 0}
-  distanceAway: 3.5
+  distanceAway: 10
   distanceAwayMultipler: 3
   distanceUp: 1.15
   distanceUpMultiplier: 4

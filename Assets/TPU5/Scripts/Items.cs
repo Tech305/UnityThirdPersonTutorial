@@ -10,6 +10,7 @@ public class Items
     public Items(GameObject on, GameObject off)
     {
         this.on = on;
+        this.off = off;
         TurnOff();
     }
     public Items(GameObject on, GameObject off, bool onByDefault)
@@ -17,7 +18,7 @@ public class Items
         this.on = on;
         this.off = off;
         if (onByDefault) TurnOn();
-        else if (!onByDefault) TurnOff();
+        else TurnOff();
     }
 
     public Items()
@@ -26,17 +27,13 @@ public class Items
 
     public void TurnOn()
     {
-        if (on)
-            on.SetActive(true);
-        if (off)
-            off.SetActive(false);
+        if (on) on.SetActive(true);
+        if (off) off.SetActive(false);
     }
     public void TurnOff()
     {
-        if(on)
-            on.SetActive(false);
-        if(off)
-            off.SetActive(true);
+        if(on) on.SetActive(false);
+        if(off) off.SetActive(true);
     }
 
     public bool Active
